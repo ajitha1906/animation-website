@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+  font-family: "Kanit", serif;
+}
+.overall{
+             padding: 20px; 
+             background-color: pink;  
+} 
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;   
+     align-items: center;
+    position: sticky;
+    width: 100%;
+    /* left:50%; */
+     padding: 20px;
+     color: black;
+     top:0px;
+     height: 50px;
+     z-index: 1;
+     /* transform: translatex(-50%); */
+     box-shadow: 5px 5px 5px  rgba(0,0,0,0.3);
+     border-radius: 5px;
+
+}
+
+nav h1{
+    font-size: 30px;
+    position: absolute;
+    animation-name: card;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+@keyframes card {
+    from{
+        top:-25%;
+        opacity: 0;
+    }
+    to{
+        top:7px;
+        opacity: 1;
+    }
+    
+}
+.subnav{
+    display: flex;
+    gap:20px;
+    position: absolute;
+    right:20px;
+    animation-name: atag ;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+@keyframes atag {
+    from{
+        bottom:-25%;
+        /* opacity: 0; */
+    }
+    to{
+        bottom:15px;
+        /* opacity: 1; */
+   }
+}
+
+.subnav a:hover{
+    background-color: orange;
+    gap: 10px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 30px 10px;
+}
+p{
+    font-size: 18px;
+    text-align: justify;
+}
+.art1{
+    animation-name: art1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    position: relative;
+}
+@keyframes art1 {
+    from{
+        left: -100%;
+        opacity: 0;
+    }
+    to{
+        left:0;
+        opacity: 1;
+    }
+    
+}
+.art2{
+    animation-name: art2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    position: relative;
+}
+@keyframes art2 {
+    from{
+        right: -100%;
+        opacity: 0;
+    }
+    to{
+        right:0;
+        opacity: 1;
+    }
+    
+}
+@media only screen and (max-width:441px){
+    .subnav{
+             display: none;
+    }
+}
+
+
+
